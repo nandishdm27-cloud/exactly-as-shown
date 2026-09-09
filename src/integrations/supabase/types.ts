@@ -14,7 +14,222 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      assignments: {
+        Row: {
+          accent: string
+          created_at: string
+          due_label: string
+          id: string
+          owner_id: string | null
+          status: string
+          subject: string
+          title: string
+        }
+        Insert: {
+          accent?: string
+          created_at?: string
+          due_label: string
+          id?: string
+          owner_id?: string | null
+          status: string
+          subject: string
+          title: string
+        }
+        Update: {
+          accent?: string
+          created_at?: string
+          due_label?: string
+          id?: string
+          owner_id?: string | null
+          status?: string
+          subject?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      attendance_records: {
+        Row: {
+          attended_count: number
+          created_at: string
+          id: string
+          owner_id: string | null
+          subject: string
+          total_count: number
+          trend_label: string
+        }
+        Insert: {
+          attended_count?: number
+          created_at?: string
+          id?: string
+          owner_id?: string | null
+          subject: string
+          total_count?: number
+          trend_label?: string
+        }
+        Update: {
+          attended_count?: number
+          created_at?: string
+          id?: string
+          owner_id?: string | null
+          subject?: string
+          total_count?: number
+          trend_label?: string
+        }
+        Relationships: []
+      }
+      campus_announcements: {
+        Row: {
+          accent: string
+          created_at: string
+          id: string
+          image_url: string | null
+          published_label: string
+          source: string
+          title: string
+        }
+        Insert: {
+          accent?: string
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          published_label: string
+          source: string
+          title: string
+        }
+        Update: {
+          accent?: string
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          published_label?: string
+          source?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      campus_events: {
+        Row: {
+          attendees_label: string
+          category: string
+          created_at: string
+          event_date: string
+          event_time: string
+          id: string
+          location: string
+          title: string
+        }
+        Insert: {
+          attendees_label?: string
+          category: string
+          created_at?: string
+          event_date: string
+          event_time: string
+          id?: string
+          location: string
+          title: string
+        }
+        Update: {
+          attendees_label?: string
+          category?: string
+          created_at?: string
+          event_date?: string
+          event_time?: string
+          id?: string
+          location?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      notifications: {
+        Row: {
+          category: string
+          created_at: string
+          detail: string
+          id: string
+          owner_id: string | null
+          read_at: string | null
+          title: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          detail: string
+          id?: string
+          owner_id?: string | null
+          read_at?: string | null
+          title: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          detail?: string
+          id?: string
+          owner_id?: string | null
+          read_at?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          bio: string | null
+          campus_id: string | null
+          created_at: string
+          department: string | null
+          email: string
+          full_name: string
+          id: string
+          phone: string | null
+          updated_at: string
+          year_level: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          bio?: string | null
+          campus_id?: string | null
+          created_at?: string
+          department?: string | null
+          email?: string
+          full_name?: string
+          id: string
+          phone?: string | null
+          updated_at?: string
+          year_level?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          bio?: string | null
+          campus_id?: string | null
+          created_at?: string
+          department?: string | null
+          email?: string
+          full_name?: string
+          id?: string
+          phone?: string | null
+          updated_at?: string
+          year_level?: string | null
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: string
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: string
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
